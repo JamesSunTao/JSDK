@@ -2,7 +2,7 @@
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
   typeof define === 'function' && define.amd ? define(factory) :
   (global = global || self, global.jsdk = factory());
-}(this, function () { 'use strict';
+}(this, (function () { 'use strict';
 
   function add(a, b) {
     console.log('加法');
@@ -21,4 +21,4 @@
 
   return index;
 
-}));
+})));

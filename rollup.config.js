@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
 import { eslint } from 'rollup-plugin-eslint';
@@ -7,6 +8,7 @@ import { uglify } from 'rollup-plugin-uglify';
 
 const packages = require('./package.json');
 
+// eslint-disable-next-line no-undef
 const ENV = process.env.NODE_ENV;
 
 const paths = {
