@@ -1,6 +1,6 @@
 {
-  "name": "jsdk",
-  "version": "1.0.0",
+  "name": "jsdk-st",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -26,7 +26,7 @@
     "type": "git",
     "url": "git+https://github.com/JamesSunTao/JSDK.git"
   },
-  "author": "suntao",
+  "author": "suntao123",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/JamesSunTao/JSDK/issues"

@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
 import { eslint } from 'rollup-plugin-eslint';
@@ -12,20 +11,20 @@ const packages = require('./package.json');
 const ENV = process.env.NODE_ENV;
 
 const paths = {
-    input: {
+    input: {         
         root:'src/index.js',
     },
     output: {
         root: ENV === 'example'
             ? 'example/dist/'
-            : 'utils/',
+            : '',
     },
 };
 
 const fileNames = {
     development: `${packages.name}.js`,
     example: `example.js`,
-    production: `${packages.name}.min.js`
+    production: `index.js`
 };
 
 const fileName = fileNames[ENV];

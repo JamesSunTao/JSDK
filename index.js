@@ -1,0 +1,1 @@
+!function(e,n){"object"==typeof exports&&"undefined"!=typeof module?module.exports=n():"function"==typeof define&&define.amd?define(n):(e=e||self).jsdk=n()}(this,function(){"use strict";return{add:function(e,n){return console.log("加法"),e+n},jian:function(e,n){return console.log("减法"),e-n}}});
