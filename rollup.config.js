@@ -1,13 +1,12 @@
 import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
 import babel from 'rollup-plugin-babel';
+import { eslint } from 'rollup-plugin-eslint';
 import replace from 'rollup-plugin-replace';
 import { uglify } from 'rollup-plugin-uglify';
 
-// eslint-disable-next-line no-undef
 const packages = require('./package.json');
 
-// eslint-disable-next-line no-undef
 const ENV = process.env.NODE_ENV;
 
 const paths = {
@@ -22,7 +21,7 @@ const paths = {
 };
 
 const fileNames = {
-    development: `${packages.name}.js`,
+    development: `dev.${packages.name}.js`,
     example: `example.js`,
     production: `index.js`
 };
@@ -39,6 +38,10 @@ export default {
     plugins: [
         resolve(),
         commonjs(),
+        eslint({
+            include: ['src/**'],
+            exclude: ['node_modules/**']
+        }),
         babel({
             exclude: 'node_modules/**',
             runtimeHelpers: true,
