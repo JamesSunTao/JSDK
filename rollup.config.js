@@ -6,7 +6,6 @@ import replace from 'rollup-plugin-replace';
 import { uglify } from 'rollup-plugin-uglify';
 
 const packages = require('./package.json');
-
 const ENV = process.env.NODE_ENV;
 
 const paths = {
@@ -14,15 +13,12 @@ const paths = {
         root:'src/index.js',
     },
     output: {
-        root: ENV === 'example'
-            ? 'example/dist/'
-            : '',
+        root: ENV === 'development' ? 'example/dist/' : 'lib/',
     },
 };
 
 const fileNames = {
     development: `dev.${packages.name}.js`,
-    example: `example.js`,
     production: `index.js`
 };
 
@@ -36,6 +32,7 @@ export default {
         name: 'jsdk'
     },
     plugins: [
+
         resolve(),
         commonjs(),
         eslint({

@@ -1,10 +1,9 @@
 {
   "name": "jsdk-st",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "description": "",
-  "main": "index.js",
+  "main": "./lib/index.js",
   "scripts": {
-    "watch": "NODE_ENV=example rollup -w -c",
     "dev": "NODE_ENV=development rollup -c",
     "build": "NODE_ENV=production rollup -c"
   },
@@ -29,5 +28,8 @@
   "bugs": {
     "url": "https://github.com/JamesSunTao/JSDK/issues"
   },
-  "homepage": "https://github.com/JamesSunTao/JSDK#readme"
+  "homepage": "https://github.com/JamesSunTao/JSDK#readme",
+  "dependencies": {
+    "rollup-plugin-alias": "^2.2.0"
+  }
 }
